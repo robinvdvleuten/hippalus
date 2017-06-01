@@ -27,8 +27,8 @@ const getMatchingChildren = (children, location) => {
   });
 };
 
-export const Router = ({ children, location }) => {
-  var active = getMatchingChildren(children, location || window.location);
+export const Router = (props: { children: React.Children, location: Location }) => {
+  var active = getMatchingChildren(props.children, props.location || window.location);
 
   return active[0] || null;
 };
