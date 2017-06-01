@@ -5,8 +5,8 @@
   "license": "MIT",
   "author": "Robin van der Vleuten <robin@webstronauts.co>",
   "main": "dist/hippalus.js",
-  "module": "dist/hippalus.es.js",
-  "jsnext:main": "dist/hippalus.es.js",
+  "module": "src/hippalus.js",
+  "jsnext:main": "src/hippalus.js",
   "keywords": [
     "router"
   ],
@@ -15,7 +15,9 @@
     "dist/*.js"
   ],
   "scripts": {
-    "build": "node ./build",
+    "build": "npm-run-all --silent transpile minify",
+    "transpile": "rollup -c",
+    "minify": "uglifyjs dist/hippalus.js -c collapse_vars,evaluate,unsafe,loops=false,keep_fargs=false,pure_getters,unused,dead_code -m -o dist/hippalus.min.js -p relative",
     "flow": "flow",
     "test": "jest --env=jsdom",
     "format": "prettier --single-quote --trailing-comma es5 --write '{src,test,build}/**/*.js'",
@@ -49,7 +51,7 @@
     "husky": "^0.13.3",
     "jest": "^20.0.1",
     "lint-staged": "^3.4.1",
-    "p-map": "^1.1.1",
+    "npm-run-all": "^4.0.2",
     "prettier": "^1.3.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
