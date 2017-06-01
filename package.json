@@ -1,6 +1,6 @@
 {
   "name": "hippalus",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Tiny router to navigate through browser apps.",
   "license": "MIT",
   "author": "Robin van der Vleuten <robin@webstronauts.co>",
