@@ -5,7 +5,6 @@
   "license": "MIT",
   "author": "Robin van der Vleuten <robin@webstronauts.co>",
   "main": "dist/hippalus.js",
-  "module": "src/hippalus.js",
   "jsnext:main": "src/hippalus.js",
   "keywords": [
     "router"
@@ -44,10 +43,8 @@
   "devDependencies": {
     "babel-jest": "^20.0.1",
     "babel-preset-env": "^1.4.0",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^2.8.2",
-    "flow-bin": "^0.46.0",
     "husky": "^0.13.3",
     "jest": "^20.0.1",
     "lint-staged": "^3.4.1",
