@@ -18,7 +18,7 @@ module.exports = {
   dest: pkg.main,
   banner,
   useStrict: false,
-  format: 'iife',
+  format: 'umd',
   external: ['react', 'path-to-regexp'],
   plugins: [
     babel({
