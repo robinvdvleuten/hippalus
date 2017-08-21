@@ -16,7 +16,7 @@
   "scripts": {
     "build": "npm-run-all --silent transpile minify",
     "transpile": "rollup -c",
-    "minify": "uglifyjs dist/hippalus.js -c collapse_vars,evaluate,unsafe,loops=false,keep_fargs=false,pure_getters,unused,dead_code -m -o dist/hippalus.min.js -p relative",
+    "minify": "uglifyjs dist/hippalus.js -c collapse_vars,evaluate,unsafe,loops=false,keep_fargs=false,pure_getters,unused,dead_code -m -o dist/hippalus.min.js",
     "flow": "flow",
     "test": "jest --env=jsdom",
     "format": "prettier --single-quote --trailing-comma es5 --write '{src,test,build}/**/*.js'",
